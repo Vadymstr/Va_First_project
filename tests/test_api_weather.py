@@ -12,7 +12,7 @@ class TestAPIWeather(unittest.TestCase):
         content = self.api_utils.get_weather(latitude="FFF", longitude=30.7411902151, expected_code=400)
 
     def test_validate_weather_date(self):
-        content = self.api_utils.get_weather(latitude=46.486, longitude=30.7411902151)
+        content = self.api_utils.get_weather(latitude=4676.486, longitude=30.7411902151)
 
         date_time = content['realtimeWeather']['items'][0]['date']
         current_date = str(datetime.now())
